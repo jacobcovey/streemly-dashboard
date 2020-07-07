@@ -36,8 +36,8 @@ const ChartCard = class extends React.Component {
       return (
         <div className="chart-card card">
           <div className="titles">
-            <span className="chart-title">{this.props.chartTitle}</span>
-            <span className="chart-subtitle">{this.props.chartSubtitle}</span>
+            <span className="chart-title" data-testid="card-chart-title">{this.props.chartTitle}</span>
+            <span className="chart-subtitle" data-testid="card-chart-subtitle">{this.props.chartSubtitle}</span>
           </div>
           <div className="chart-container">
             <Doughnut 
@@ -47,7 +47,7 @@ const ChartCard = class extends React.Component {
               options={{ maintainAspectRatio: false, cutoutPercentage: 80 }}
               legend={{display: false}}
             />
-            <div className="chart-total">{this.state.total}</div>
+            <div className="chart-total" data-testid="chart-total">{this.state.total}</div>
           </div>
           <div className="chart-numbers">
             {this.props.chartData.map((item, index) => (

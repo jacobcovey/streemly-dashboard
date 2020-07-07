@@ -49,6 +49,7 @@ function Header() {
                 <div className="display-mode">
                     <Brightness5/>
                     <Switch
+                        data-testid="color-mode-switch"
                         checked={state.checked}
                         onChange={handleChange}
                         name="checked"

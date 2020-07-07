@@ -129,7 +129,7 @@ function TableCard(props) {
               ? props.tableData.requests.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
               : props.tableData.requests
             ).map((request) => (
-              <TableRow key={request.name}>
+              <TableRow data-testid="body-row" key={request.name}>
                 <TableCell component="th" scope="row">
                   <div className="request-name-container">
                     <AddIcon/>
